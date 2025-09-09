@@ -83,8 +83,18 @@ console.log(existeFilmeDoGenero("Drama"));*/
 buscarEnderecoPorCEP("88137082");
 */
 //EXERCICIO 10
-function encontrarFilmePorId(id) {
+/*function encontrarFilmePorId(id) {
     const filmesEncontrados = filmes.filter(filme => filme.id === id);
     return filmesEncontrados[0];
 }
-console.log(encontrarFilmePorId(3));
+console.log(encontrarFilmePorId(3));*/
+
+//EXERCICIO BONUS
+
+function contarFilmesPorGenero(filmes) {
+    return filmes.reduce((contador, filme) => {
+        contador[filme.genero] = (contador[filme.genero] || 0) + 1;
+        return contador;
+    }, {});
+}
+console.log(contarFilmesPorGenero(filmes));

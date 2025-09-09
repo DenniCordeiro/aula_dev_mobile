@@ -68,4 +68,23 @@ console.log(ficcaoCientificaExcelentes)*/
 console.log(titulodrama);*/
 
 //EXERCICIO 8
+/*function existeFilmeDoGenero(genero) {
+    let resultado = filmes.filter(filme => filme.genero.toLowerCase() === genero.toLowerCase());
+    return resultado > 0 ? true : false;
+}
+console.log(existeFilmeDoGenero("Drama"));*/
 
+//EXERCICIO 9
+/*function buscarEnderecoPorCEP(cep) {
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response => response.json())
+        .then(data => console.log(data));
+}
+buscarEnderecoPorCEP("88137082");
+*/
+//EXERCICIO 10
+function encontrarFilmePorId(id) {
+    const filmesEncontrados = filmes.filter(filme => filme.id === id);
+    return filmesEncontrados[0];
+}
+console.log(encontrarFilmePorId(3));
